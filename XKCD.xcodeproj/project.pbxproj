@@ -10,12 +10,13 @@
 		254D3562E83DB0C22F4B0402 /* Pods_XKCDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39E42839A139437202652CA /* Pods_XKCDUITests.framework */; };
 		5299A715B7B8FC0439DB82BB /* Pods_XKCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287FEBCE4C35C7DE2904C7BE /* Pods_XKCD.framework */; };
 		B2D0876421AD47BC00189C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D0876321AD47BC00189C97 /* AppDelegate.swift */; };
-		B2D0876621AD47BC00189C97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D0876521AD47BC00189C97 /* ViewController.swift */; };
+		B2D0876621AD47BC00189C97 /* ComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D0876521AD47BC00189C97 /* ComicViewController.swift */; };
 		B2D0876921AD47BC00189C97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D0876721AD47BC00189C97 /* Main.storyboard */; };
 		B2D0876B21AD47BF00189C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2D0876A21AD47BF00189C97 /* Assets.xcassets */; };
 		B2D0876E21AD47BF00189C97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D0876C21AD47BF00189C97 /* LaunchScreen.storyboard */; };
 		B2D0877921AD47BF00189C97 /* XKCDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D0877821AD47BF00189C97 /* XKCDTests.swift */; };
 		B2D0878421AD47BF00189C97 /* XKCDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D0878321AD47BF00189C97 /* XKCDUITests.swift */; };
+		B2D0879221AD51B100189C97 /* ComicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D0879121AD51B100189C97 /* ComicViewModel.swift */; };
 		DBFD3D0BCABF01959F370B3C /* Pods_XKCDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA608367185DFC149573AB6 /* Pods_XKCDTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +48,7 @@
 		AD599149168B718290739EB1 /* Pods-XKCDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XKCDUITests.release.xcconfig"; path = "Target Support Files/Pods-XKCDUITests/Pods-XKCDUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B2D0876021AD47BC00189C97 /* XKCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XKCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D0876321AD47BC00189C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2D0876521AD47BC00189C97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2D0876521AD47BC00189C97 /* ComicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicViewController.swift; sourceTree = "<group>"; };
 		B2D0876821AD47BC00189C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2D0876A21AD47BF00189C97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2D0876D21AD47BF00189C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		B2D0877F21AD47BF00189C97 /* XKCDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XKCDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D0878321AD47BF00189C97 /* XKCDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XKCDUITests.swift; sourceTree = "<group>"; };
 		B2D0878521AD47BF00189C97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2D0879121AD51B100189C97 /* ComicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicViewModel.swift; sourceTree = "<group>"; };
 		F39E42839A139437202652CA /* Pods_XKCDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XKCDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,7 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				B2D0876321AD47BC00189C97 /* AppDelegate.swift */,
-				B2D0876521AD47BC00189C97 /* ViewController.swift */,
+				B2D0876521AD47BC00189C97 /* ComicViewController.swift */,
+				B2D0879121AD51B100189C97 /* ComicViewModel.swift */,
 				B2D0876721AD47BC00189C97 /* Main.storyboard */,
 				B2D0876A21AD47BF00189C97 /* Assets.xcassets */,
 				B2D0876C21AD47BF00189C97 /* LaunchScreen.storyboard */,
@@ -459,7 +462,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2D0876621AD47BC00189C97 /* ViewController.swift in Sources */,
+				B2D0879221AD51B100189C97 /* ComicViewModel.swift in Sources */,
+				B2D0876621AD47BC00189C97 /* ComicViewController.swift in Sources */,
 				B2D0876421AD47BC00189C97 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
