@@ -27,8 +27,14 @@ class ComicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        setupRx()
+
     }
 
+    private func setupRx() {
+        comicViewModel.title.asDriver().drive(titleLabel.rx.text).disposed(by: disposeBag)
+    }
 
 }
 

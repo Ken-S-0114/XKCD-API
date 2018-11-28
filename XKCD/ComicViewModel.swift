@@ -12,13 +12,26 @@ import RxCocoa
 import RxAlamofire
 
 final class ComicViewModel  {
-    private var title: BehaviorRelay<String>
-    private var date: BehaviorRelay<String>
-    private var imageUrl: BehaviorRelay<URL?>
+    var title: BehaviorRelay<String>
+    var date: BehaviorRelay<String>
+    var imageUrl: BehaviorRelay<URL?>
 
-    private var latestComicNum: BehaviorRelay<Int?>
-    private var currentComic: BehaviorRelay<Comic?>
+    var latestComicNum: BehaviorRelay<Int?>
+    var currentComic: BehaviorRelay<Comic?>
 
-    init() {}
+    private var formatter = DateFormatter()
+
+
+    init() {
+        title = BehaviorRelay<String>(value: "")
+        date = BehaviorRelay<String>(value: "")
+        imageUrl = BehaviorRelay<URL?>(value: nil)
+
+        latestComicNum = BehaviorRelay<Int?>(value: nil)
+        currentComic = BehaviorRelay<Comic?>(value: nil)
+
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
+    }
 
 }
