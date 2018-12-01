@@ -34,6 +34,15 @@ class ComicViewController: UIViewController {
 
     private func setupRx() {
         comicViewModel.title.asDriver().drive(titleLabel.rx.text).disposed(by: disposeBag)
+        comicViewModel.imageUrl.asDriver().drive(onNext: { [weak self] url in
+            self?.comicImageView.kf.setImage(with: url)
+        }).disposed(by: disposeBag)
+
+        // ビューモデルがコミックのタイトルを取得できたらRxの力でタイトルラベルに自動的に反映
+        comicViewModel.date.asDriver().drive(captionLabel.rx.text).disposed(by: disposeBag)
+        // isNextEnabledはnextButtonのenabledプロパティーにバインドされるため自動的に反映される・
+        comicViewModel.isNextEnabled.drive(nextButton.rx.isEnabled).disposed(by: disposeBag)
+        comicViewModel.isPreviousEnable.drive(previousButton.rx.isEnabled).disposed(by: disposeBag)
     }
 
 }

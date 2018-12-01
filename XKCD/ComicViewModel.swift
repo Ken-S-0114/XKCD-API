@@ -21,6 +21,8 @@ final class ComicViewModel  {
 
     private var formatter = DateFormatter()
 
+    var isNextEnabled: Driver<Bool>
+    var isPreviousEnable: Driver<Bool>
 
     init() {
         title = BehaviorRelay<String>(value: "")
@@ -32,6 +34,18 @@ final class ComicViewModel  {
 
         formatter.dateStyle = .long
         formatter.timeStyle = .none
+
+        // combineLatestでその両方が同じの場合（見ているコミックは最新）はfalseを返す
+        // distinctUntilChangedは回覧中が変わる度にブールの値が変わらなければ無駄にenabledのバインディング処理が起こさないようにある
+        isNextEnabled = Driver.combineLatest(self.latestComicNum.asDriver(), self.currentComic.asDriver(), resultSelector: { (latestNum, current) -> Bool in
+            guard let latestNum = latestNum, let currentNum = current?.num else { return false }
+            return latestNum != currentNum
+        }).distinctUntilChanged()
+
+        isPreviousEnable = currentComic.asDriver().map({ comic -> Bool in
+            guard let num = comic?.num else { return false }
+            return num > 1
+        }).distinctUntilChanged()
     }
 
 }
